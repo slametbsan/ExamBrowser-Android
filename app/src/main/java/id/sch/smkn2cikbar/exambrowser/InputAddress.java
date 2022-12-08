@@ -9,7 +9,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.design.widget.TextInputLayout;
+import com.google.android.material.textfield.TextInputLayout;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
@@ -85,7 +85,7 @@ public class InputAddress extends Activity {
             }).show();
         }
         final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        this.inputAddress.setText(prefs.getString("autoSave", BuildConfig.FLAVOR));
+//        this.inputAddress.setText(prefs.getString("autoSave", BuildConfig.FLAVOR));
         this.inputAddress.addTextChangedListener(new TextWatcher() {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
             }
